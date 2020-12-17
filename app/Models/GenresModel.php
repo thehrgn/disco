@@ -5,6 +5,5 @@ use CodeIgniter\Model;
 class GenresModel extends Model
 {
     protected $table = 'genres';
-    
-
+    protected $returnType    = 'App\Entities\Genre';
 }

@@ -9,8 +9,10 @@ class Genre extends BaseController
 	{
 		$gm = new GenresModel();
 		$result = $gm->find();
-		$data['genres'] = $result;
-		return view("inicio",$data);
+		//$data['genres'] = $result;
+		//return view("inicio",$data);
+		$parser = \Config\Services::parser();
+		echo $parser->setData(['genres'=>$result])->render('inicio');
 	}
 
 	public function new(){
@@ -20,7 +22,7 @@ class Genre extends BaseController
 */
 $parser = \Config\Services::parser();
 
-echo $parser->setData(['titulo'=>'Titulo Nuevo'])
+echo $parser->setData(['titulo'=>'New Genre ',])
              ->render('nuevo');
 	}
 

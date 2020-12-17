@@ -8,14 +8,16 @@
     <h1>Genres</h1>
     <table border="1">
       <thead>
+        <th>Id</th>
         <th>Name</th>
       </thead>
       <tbody>
-        <?php foreach ($genres as $key => $genre): ?>
+        {genres}
           <tr>
-            <td><?=$genre['name'];?></td>
+            <td>{id}</td>
+            <td>{name}</td>
           </tr>
-        <?php endforeach; ?>
+        {/genres}
       </tbody>
     </table>
   </body>

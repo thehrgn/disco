@@ -5,7 +5,7 @@
     <title></title>
   </head>
   <body>
-    <h1>{titulo}  New Genre</h1>
+    <h1>{titulo}</h1>
     <h2></h2>
     <form class="" action="index.html" method="post">
       <label for="name">Name:</label>
