@@ -10,12 +10,14 @@
       <thead>
         <th>Id</th>
         <th>Name</th>
+        <th>Options</th>
       </thead>
       <tbody>
         {genres}
           <tr>
             <td>{id}</td>
             <td>{name}</td>
+            <td><a href="genre/edit/{id}">Edit</a></td>
           </tr>
         {/genres}
       </tbody>

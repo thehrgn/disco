@@ -7,10 +7,10 @@
   <body>
     <h1>{titulo}</h1>
     <h2></h2>
-    <form class="" action="index.html" method="post">
+    <form class="" action="save" method="post">
       <label for="name">Name:</label>
-      <input type="text" name="name" id="name" value="">
-      <button type="button" name="button">Save</button>
+      <input type="text" name="name" id="name" value="" minlength="3" maxlength="255" required>
+      <button type="submit" name="button">Save</button>
     </form>
   </body>
 </html>
