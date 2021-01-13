@@ -8,16 +8,18 @@
     <h1>Genres</h1>
     <table border="1">
       <thead>
-        <th>Id</th>
+        <th>#</th>
         <th>Name</th>
-        <th>Options</th>
+        <th colspan="2">Options</th>
       </thead>
       <tbody>
         {genres}
           <tr>
-            <td>{id}</td>
+            <td></td>
             <td>{name}</td>
-            <td><a href="genre/edit/{id}">Edit</a></td>
+            <td>
+              <a href="genre/edit/{id}">Edit</a>
+              <a href="genre/delete/{id}">Delete</a></td>
           </tr>
         {/genres}
       </tbody>

@@ -59,7 +59,7 @@ echo $parser->setData($data)
 				 $id = $this->request->getPost('id');
 				 $name = $this->request->getPost('name');
 				 //Instancia del modelo
-				 $gm = new GenresModel();				 
+				 $gm = new GenresModel();
 
 				 $gm->update($id,['name'=>$name,]);
 				 $this->response->redirect('index');
@@ -68,6 +68,14 @@ echo $parser->setData($data)
 				 echo 'Verifique datos';
 			 }
 		}
+
+		public function delete($id){
+				$gm = new GenresModel();
+				$gm->delete($id);
+				//$gm->where(['name'=>'Blues'])->delete();
+				$this->response->redirect('index');
+
+		}//CLOSE FUNCTION
 
 
 }
