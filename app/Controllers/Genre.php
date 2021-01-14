@@ -12,7 +12,7 @@ class Genre extends BaseController
 		//$data['genres'] = $result;
 		//return view("inicio",$data);
 		$parser = \Config\Services::parser();
-		echo $parser->setData(['genres'=>$result])->render('inicio');
+		echo $parser->setData(['genres'=>$result,'base_url'=>base_url()])->render('inicio');
 	}
 
 	public function new(){
@@ -22,6 +22,7 @@ class Genre extends BaseController
 */
 $parser = \Config\Services::parser();
 $data['titulo']='New Genre';
+$data['base_url'] = base_url();
 echo $parser->setData($data)
              ->render('new');
 	}
@@ -62,7 +63,7 @@ echo $parser->setData($data)
 				 $gm = new GenresModel();
 
 				 $gm->update($id,['name'=>$name,]);
-				 $this->response->redirect('index');
+				 $this->response->redirect(base_url().'/disco/public/genre');
 
 			 }else{
 				 echo 'Verifique datos';
@@ -73,7 +74,7 @@ echo $parser->setData($data)
 				$gm = new GenresModel();
 				$gm->delete($id);
 				//$gm->where(['name'=>'Blues'])->delete();
-				$this->response->redirect('index');
+				$this->response->redirect(base_url().'/disco/public/genre');
 
 		}//CLOSE FUNCTION
 

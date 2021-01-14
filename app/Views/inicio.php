@@ -18,8 +18,8 @@
             <td></td>
             <td>{name}</td>
             <td>
-              <a href="genre/edit/{id}">Edit</a>
-              <a href="genre/delete/{id}">Delete</a></td>
+              <a href="{base_url}/disco/public/genre/edit/{id}">Edit</a>
+              <a href="{base_url}/disco/public/genre/delete/{id}">Delete</a></td>
           </tr>
         {/genres}
       </tbody>
