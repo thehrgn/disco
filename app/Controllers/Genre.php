@@ -79,4 +79,18 @@ echo $parser->setData($data)
 		}//CLOSE FUNCTION
 
 
+		public function genresjs()
+		{
+			if($this->request->isAjax())
+			{
+				$gm = new GenresModel();
+				$result = $gm->find();
+				return  json_encode(["data"=>$result]);
+			}else {
+				$this->response->redirect(base_url().'/disco/public/genre');
+			}
+
+		}
+
+
 }
