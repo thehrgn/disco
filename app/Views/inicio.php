@@ -20,7 +20,7 @@
       <thead>
         <th>#</th>
         <th>Name</th>
-
+        <th>Options</th>
       </thead>
       <tbody>
       </tbody>
@@ -40,7 +40,12 @@ $(document).ready( function () {
       "dataSrc":'',
       "columns": [
             { "data": "id" },
-            { "data": "name" }
+            { "data": "name" },
+            {
+              "render": function(data, type, full, meta){
+                return " <a href='' class='btn btn-warning' role='button'>Edit</a><a href='' class='btn btn-danger' role='button'>Delete</a>   ";
+              }
+            }
             ,
 
     ]
